@@ -1,0 +1,14 @@
+<%- include('partials/_header-eliminar'); %>   
+<main class="main">
+    <div class="div-form">
+        <h1 class="titulo-ppal">Que trabajador Deseas Eliminar?</h1>
+        <ul>
+            <% workersActuales.forEach(function( worker){  %>
+             <% if(worker != null){ %>
+                <a href=<%= url+ '/' + worker.id %>><li><%= worker.nombre %> <%= worker.apellido %></li></a>
+             <% } %>
+            <% }) %>
+        </ul>
+  </div>
+</main>
+<%- include('partials/_footer'); %>

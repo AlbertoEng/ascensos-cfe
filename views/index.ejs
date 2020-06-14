@@ -1,0 +1,45 @@
+<%- include('partials/_header'); %>    
+    <header class="header">
+        <div class="header-div">
+            <h1 class="titulo-ppal">Rol de Ascenso</h1>
+            <h2 class="titulo-sec">Depto. Instrumentacion y Control</h2>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <div class="nav-bar-container">
+            <ul class="nav-bar-list">
+                <li class="nav-item"><a href="/new-worker">Agregar</a></li>
+                <li class="nav-item"><a href="/delete-worker">Eliminar</a></li>
+                <li class="nav-item">Ascendidos</li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main">
+        <section class="main-section">
+            <div class="div-container">
+                <% if(workers != null ){ %>
+                    <% workers.forEach( function(worker){ %>
+                        <div class="card-worker">
+                            <div class="add-ascenso">
+                                <p>Tec: <%= `${worker.nombre.toUpperCase() + " " + worker.apellido.toUpperCase() }` %></p>
+                                <a href="" class="a-add-ascenso"><div>Agregar Ascenso</div></a>
+                            </div>
+
+                            <div class="rpe-container">
+                                <p>RPE: <%= worker.rpe %></p>
+                                <p>Ant: <%= worker.antiguedad %> años</p>
+                                <p>Status: <span class="ascendido"><%= worker.statusMovimiento %></span></p>
+                            </div>
+                            <div class="last-ascenso">
+                                <p>Ult. ascenso:</p>
+                                <p> del 10/mayo/2020 al 20/mayo/2020</p>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% }else{ %>
+                    <h2 class="titulo-sec">No hay Trabajadores Agregados</h2>
+                <% } %>
+            </div>
+        </section>
+    </main>
+<%- include('partials/_footer'); %>   <!-- partimos de la carpeta views como ruta relativa-->

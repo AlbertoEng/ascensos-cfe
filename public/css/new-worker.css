@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+*::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../img/night.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    padding-top: 0px;
+
+  }
+  
+  .div-form{
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 0, 0);
+    margin: 0 auto;
+  }
+  
+  .form-new-worker{
+    padding: 0px 10% 50px;
+    margin: 0px;
+    background: rgba(0, 179, 255, 0.644);
+  }
+
+  .title-form{
+      color: white;
+      margin:  0 auto;
+      text-align: center;
+      padding: 20px;
+  }
+  
+  
+  
+  input{
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px 10px 5px;
+    background: rgb(255, 255, 255);
+    border: solid black 1px;
+    border-radius: 5px;
+  }
+
+  input[type=submit]{
+      margin-top: 20px;
+      color: black;
+      font-weight: bolder;
+      border: none;
+  }
+  input[type=submit]:hover{
+      color: white;
+      background: blue;
+  }
+  
+  input[type=submit]:active{
+      transform: scale(1.1);
+}
+
+hr{
+  height: 1px;
+}

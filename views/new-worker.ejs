@@ -1,0 +1,14 @@
+<%- include('partials/_header'); %>   
+<main class="main">
+    <div class="div-form">
+    <form class="form-new-worker" action="/add-worker" method="post">
+      <h2 class="title-form">Registrar nuevo Trabajador</h2>
+      <input type="text" name="nombre" autofocus placeholder="Nombre del Tecnico"  required>
+      <input type="text" name="apellido" placeholder="Apellido" required help="false">
+      <input type="text" name="rpe" placeholder="RPE" required>
+      <input type="text" name="antiguedad" placeholder="Antiguedad" required>
+      <input class="registrar" type="submit" value="Registrar"  required>
+    </form>
+  </div>
+</main>
+<%- include('partials/_footer'); %>
